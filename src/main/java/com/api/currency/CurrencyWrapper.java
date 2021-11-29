@@ -1,5 +1,6 @@
 package com.api.coinbase;
 
+
 import java.util.ArrayList;
 
 public class CurrencyWrapper {

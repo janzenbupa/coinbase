@@ -6,7 +6,6 @@ package com.api.coinbase;
   //  public Currency findCurrencyByName(String name);
 //}
 
-import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
