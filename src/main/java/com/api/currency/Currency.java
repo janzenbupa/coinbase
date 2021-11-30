@@ -1,4 +1,4 @@
-package com.api.coinbase;
+package com.api.currency;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

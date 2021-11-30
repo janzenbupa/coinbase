@@ -1,5 +1,6 @@
-package com.api.coinbase;
+package com.api.currency;
 
+import com.api.gson.GsonSerializer;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -52,28 +53,11 @@ public class CurrencyService implements CurrencyRepository{
             }
             in.close();
 
-            CurrencyWrapper currencies = Deserialize(stringBuilder.toString());
+            CurrencyWrapper currencies = new GsonSerializer().Deserialize(stringBuilder.toString());
             return currencies;
         }
         catch (IOException ex){
             return null;
         }
-    }
-
-    private CurrencyWrapper Deserialize(String response){
-        GsonBuilder builder = new GsonBuilder();
-        builder.setPrettyPrinting();
-
-        Gson gson = builder.create();
-        CurrencyWrapper currencies = gson.fromJson(response, CurrencyWrapper.class);
-
-        return currencies;
-    }
-
-    public <T> String Serialize(T obj){
-        Gson gson = new Gson();
-        String json = gson.toJson(obj);
-
-        return json;
     }
 }

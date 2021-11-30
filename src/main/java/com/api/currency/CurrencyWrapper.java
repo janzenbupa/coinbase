@@ -1,4 +1,4 @@
-package com.api.coinbase;
+package com.api.currency;
 
 
 import java.util.ArrayList;

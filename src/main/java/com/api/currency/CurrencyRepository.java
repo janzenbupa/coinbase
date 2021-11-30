@@ -1,4 +1,4 @@
-package com.api.coinbase;
+package com.api.currency;
 
 //import org.springframework.data.repository.CrudRepository;
 
@@ -15,6 +15,4 @@ public interface CurrencyRepository {
     Currency findCurrencyByName(String _id);
 
     ArrayList<Currency> findCurrencies();
-
-    <T> String Serialize(T obj);
 }
