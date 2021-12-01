@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
-@ComponentScan(basePackages = { "com.api.coinbase", "com.api.currency", "com.api.gson" })
+@ComponentScan(basePackages = { "com.api.coinbase", "com.api.currency", "com.api.exchangerates", "com.api.gson" })
 public class CoinbaseApplication {
 
     public static void main(String[] args) {

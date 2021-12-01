@@ -53,7 +53,7 @@ public class CurrencyService implements CurrencyRepository{
             }
             in.close();
 
-            CurrencyWrapper currencies = new GsonSerializer().Deserialize(stringBuilder.toString());
+            CurrencyWrapper currencies = new GsonSerializer().deserialize(stringBuilder.toString(), CurrencyWrapper.class);
             return currencies;
         }
         catch (IOException ex){

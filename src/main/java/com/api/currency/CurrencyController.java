@@ -18,7 +18,7 @@ public class CurrencyController {
         ArrayList<Currency> currencies = this._currencyRepository.findCurrencies();
 
         if (currencies != null)
-            return this._gson.Serialize(currencies);
+            return this._gson.serialize(currencies);
         return "Could not retrieve currencies.";
     }
 
